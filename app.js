@@ -1,10 +1,12 @@
-// const express = require('express')
-import express from 'express'
+// import express from 'express' // MJS
+const express = require('express')
 const app = express()
 
-app.get('/', (req, res) => res.send('Hello, world!'))
+const authorRouter = require('./routes/authorRouter')
+
+app.use('/authors', authorRouter)
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
-  console.log(`My first Express app - listening on port ${PORT}!`)
+  console.log(`Listening on port ${PORT}!`)
 })
