@@ -12,4 +12,7 @@ usersRouter.post('/create', usersController.usersCreatePost)
 usersRouter.get('/:id/update', usersController.usersUpdateGet)
 usersRouter.post('/:id/update', usersController.usersUpdatePost)
 
+// Delete Users
+usersRouter.post('/:id/delete', usersController.usersDeletePost)
+
 module.exports = usersRouter
