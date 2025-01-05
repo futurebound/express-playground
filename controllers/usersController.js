@@ -18,6 +18,16 @@ const validateUser = [
     .withMessage(`Last name ${alphaErr}`)
     .isLength({ min: 1, max: 10 })
     .withMessage(`Last name ${lengthErr}`),
+  body('email').isEmail(),
+  body('age')
+    .isNumeric()
+    .withMessage(`Age must only be numbers.`)
+    .isLength({ min: 18, max: 120 })
+    .withMessage(`Age must be between 18 and 120.`),
+  body('bio')
+    .trim()
+    .isLength({ max: 200 })
+    .withMessage(`Bio has a maximum of 200 characters.`),
 ]
 
 // We can pass an entire array of middleware validations to our controller.
