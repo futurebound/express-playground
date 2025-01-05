@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul>
+      <% if (locals.users) {%> <% users.forEach(function(user) { %>
+      <li>
+        <p>ID: <%= user.id %></p>
+        <p>Name: <%= user.firstName %> <%= user.lastName %></p>
+        <p>Email: <%= user.email %></p>
+        <p>Age: <%= user.age %></p>
+        <p>Bio: <%= user.bio %></p>
+      </li>
+      <% }); %> <% } %>
+    </ul>
+
+    <a href="/">Back to home</a>
+  </body>
+</html>

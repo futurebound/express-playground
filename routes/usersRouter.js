@@ -15,4 +15,7 @@ usersRouter.post('/:id/update', usersController.usersUpdatePost)
 // Delete Users
 usersRouter.post('/:id/delete', usersController.usersDeletePost)
 
+// Search for users by email
+usersRouter.get('/search', usersController.usersSearch)
+
 module.exports = usersRouter

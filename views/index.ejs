@@ -6,6 +6,16 @@
   </head>
   <body>
     <h1><%= title %></h1>
+    <section>
+      <h2>Search for User by Email</h2>
+      <form action="/search" method="GET">
+        <section>
+          <label for="email">Email: </label>
+          <input type="email" name="email" id="email" required />
+        </section>
+        <button type="submit">Search</button>
+      </form>
+    </section>
     <ul>
       <% if (locals.users) {%> <% users.forEach(function(user) { %>
       <li>

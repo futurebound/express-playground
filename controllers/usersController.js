@@ -103,3 +103,17 @@ exports.usersDeletePost = (req, res) => {
   usersStorage.deleteUser(req.params.id)
   res.redirect('/')
 }
+
+exports.usersSearch = (req, res) => {
+  console.log(req.query)
+  const users = usersStorage.getUsers()
+  const filteredUsers = users.filter((user) => {
+    return user.email === req.query.email
+  })
+  console.log(filteredUsers)
+  res.render('search', {
+    title: 'Search Results',
+    users: filteredUsers,
+  })
+  // res.redirect('/')
+}
