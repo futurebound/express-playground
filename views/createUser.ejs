@@ -7,10 +7,26 @@
   <body>
     <h1><%= title %></h1>
     <form action="/create" method="POST">
-      <label for="firstName">First Name: </label>
-      <input type="text" name="firstName" id="firstName" required />
-      <label for="lastName">Last Name: </label>
-      <input type="text" name="lastName" id="lastName" required />
+      <section>
+        <label for="firstName">First Name: </label>
+        <input type="text" name="firstName" id="firstName" required />
+      </section>
+      <section>
+        <label for="lastName">Last Name: </label>
+        <input type="text" name="lastName" id="lastName" required />
+      </section>
+      <section>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required />
+      </section>
+      <section>
+        <label for="age">Age: </label>
+        <input type="number" name="age" id="age" />
+      </section>
+      <section>
+        <label for="bio">Bio: </label>
+        <input type="text" name="bio" id="bio" />
+      </section>
       <button type="submit">Submit</button>
     </form>
     <a href="/">Back to home</a>
